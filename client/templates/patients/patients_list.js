@@ -2,7 +2,7 @@ Template.patientsList.helpers({
 
     settings: function () {
         return {
-            collection: patientData,
+            collection: Patients.find(),
             rowsPerPage: 20,
             showFilter: true,
             fields:[
@@ -14,16 +14,3 @@ Template.patientsList.helpers({
         };
     }
 });
-
-var patientData = [
-    {
-        firstName: 'Agustin',
-        lastName: 'Bally',
-        birthDate: new Date(1981,7,12).toLocaleDateString()
-    },
-    {
-        firstName: 'Nicolas',
-        lastName: 'Dijkstra',
-        birthDate: new Date(1978,0,24).toLocaleDateString()
-    }
-];
